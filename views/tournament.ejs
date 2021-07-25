@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon (1).ico">
+  <title>Tournaments</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <%-include ('ejs-modules/navbar');%>
+  <div class="backtext">
+    <div class="backtour">
+
+    </div>
+    <div class="gamename">
+      <img src="/images/backtour-removebg-preview.png" alt="">
+    </div>
+  </div>
+
+  <div class="container3">
+
+    <div class="solo">
+      <div class="name">
+        <p>SOLO MATCH</p>
+      </div>
+      <hr class="tourhr">
+      <div class="containeroftou">
+        <div class="cards">
+          <%for(var solo=0;solo<gameSoloFront.length;solo++){%>
+
+          <a class="card" href="tournament/solo/<%=gameSoloFront[solo]._id%>" >
+            <span class="card-header">
+            </span>
+            <span class="card-title">
+              <h5 class="game-names"><%=gameSoloFront[solo].gameName%></h5>
+            </span>
+            <span class="card-summary">
+              <div class="inner">
+                <img src="/images/schedule (1).png" class="imgdate">
+                <p class="dateoft"><%=gameSoloFront[solo].gameDate%></p>
+                <div class="vl"></div>
+                <img src="/images/icons8-checked-user-male-48.png" class="imgpart">
+                <p class="participant">0/<%=gameSoloFront[solo].maxPlayers%></p>
+              </div>
+              <hr class="tourhr">
+
+              <div class="inner">
+                <img src="/images/icons8-rupee-48.png" class="imgpart">
+                <p class="entryfee"><%=gameSoloFront[solo].gameEntry%> </p>
+                <div class="vl"></div>
+                <img src="/images/icons8-trophy-48.png" class="imgpool">
+                <p class="pool"><%=gameSoloFront[solo].winningAmount%> rs</p>
+
+              </div>
+            </span>
+          </a>
+
+          <%}%>
+        </div>
+      </div>
+    </div>
+    <hr class="tourhr">
+    <div class="duo">
+      <div class="name">
+        <p>DUO MATCH</p>
+      </div>
+      <hr class="tourhr">
+
+      <div class="containeroftou">
+        <div class="cards">
+          <%for(var duo=0;duo<gameDuoFront.length;duo++){%>
+          <a class="card" href="tournament/duo/<%=gameDuoFront[duo]._id%>"  >
+            <span class="card-header">
+            </span>
+            <span class="card-title">
+              <h5 class="game-names"><%=gameDuoFront[duo].gameName%></h5>
+            </span>
+            <span class="card-summary">
+              <div class="inner">
+                <img src="/images/schedule (1).png" class="imgdate">
+                <p class="dateoft"><%=gameDuoFront[duo].gameDate%></p>
+                <div class="vl"></div>
+                <img src="/images/icons8-checked-user-male-48.png" class="imgpart">
+                <p class="participant">0/<%=gameDuoFront[duo].maxPlayers%></p>
+              </div>
+              <hr class="tourhr">
+
+              <div class="inner">
+                <img src="/images/icons8-rupee-48.png" class="imgpart">
+                <p class="entryfee"><%=gameDuoFront[duo].gameEntry%> </p>
+                <div class="vl"></div>
+                <img src="/images/icons8-trophy-48.png" class="imgpool">
+                <p class="pool"><%=gameDuoFront[duo].winningAmount%> rs</p>
+              </div>
+            </span>
+          </a>
+
+          <%}%>
+        </div>
+      </div>
+
+    </div>
+    <hr class="tourhr">
+    <div class="squad">
+      <div class="name">
+        <p>SQUAD MATCH</p>
+      </div>
+      <hr class="tourhr">
+      <div class="containeroftou">
+        <div class="cards">
+          <%for(var squad=0;squad<gameSquadFront.length;squad++){%>
+          <a class="card" href="tournament/squad/<%=gameSquadFront[squad]._id%>"   >
+            <span class="card-header">
+            </span>
+            <span class="card-title">
+              <h5 class="game-names"><%=gameSquadFront[squad].gameName%></h5>
+            </span>
+            <span class="card-summary">
+              <div class="inner">
+                <img src="/images/schedule (1).png" class="imgdate">
+                <p class="dateoft"><%=gameSquadFront[squad].gameDate%> </p>
+                <div class="vl"></div>
+                <img src="/images/icons8-checked-user-male-48.png" class="imgpart">
+                <p class="participant">0/<%=gameSquadFront[squad].maxPlayers%></p>
+              </div>
+              <hr class="tourhr">
+
+              <div class="inner">
+                <img src="/images/icons8-rupee-48.png" class="imgpart">
+                <p class="entryfee"><%=gameSquadFront[squad].gameEntry%></p>
+                <div class="vl"></div>
+                <img src="/images/icons8-trophy-48.png" class="imgpool">
+                <p class="pool"><%=gameSquadFront[squad].winningAmount%>rs</p>
+
+              </div>
+            </span>
+          </a>
+
+          <%}%>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+<script src="JS/script.js "></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+
+</html>

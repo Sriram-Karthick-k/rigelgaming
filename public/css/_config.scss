@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "papu";
+    src: url(../fonts/FARRAY.otf);
+}
+
+@font-face {
+    font-family: "papu1";
+    src: url(../fonts/HalogenRoughbyPixelSurplus-Regular.otf);
+}
+
+@font-face {
+    font-family: "papu2";
+    src: url(../fonts/metallord.otf);
+}
+
+@font-face {
+    font-family: "papu3";
+    src: url(../fonts/B612-Bold.ttf);
+}
+
+@font-face {
+    font-family: "papu4";
+    src: url(../fonts/B612-Regular.ttf);
+}
+
+@font-face {
+    font-family: "papu5";
+    src: url(../fonts/modename.ttf);
+}
+
+@font-face {
+    font-family: "papu6";
+    src: url(../fonts/ConsertaDemoRegular-2znv.ttf);
+}
+
+$navfont:"papu";
+$logo:"papu1";
+$content:"papu2";
+$foot:"papu3";
+$foots:"papu4";
+$modename:"papu5";
+$boxfont:"papu6";

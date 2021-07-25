@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon (1).ico">
+    <title>Squad Match</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body class="infobody">
+
+    <div class="joinrule">
+        <img src="/images/newlogo.jpg" alt="" class="joinlogo">
+        <h3><%=gameName%></h3>
+        <hr class="tourrhr">
+        <div class="detailing">
+            <div class="first">
+                <img src="/images/icons8-calendar-48.png" class="imdate">
+                <p class="datoft"><%=gameDate%></p>
+            </div>
+            <div class="second">
+                <img src="/images/icons8-rupee-48.png" class="imentry">
+                <p class="etryfee">Rs.<%=gameEntry%></p>
+            </div>
+            <div class="third">
+                <img src="/images/icons8-trophy-48.png" class="impool">
+                <p class="pol">Rs.<%=gameWin%></p>
+            </div>
+            <div class="fourth">
+                <img src="/images/icons8-checked-user-male-48.png" class="impart">
+                <p class="participan">0/<%=maxPlayer%></p>
+            </div>
+        </div>
+        <hr class="tourrhr">
+        <div class="joru">
+            <a href="" class="join" style="text-decoration: none;">JOIN</a>
+            <a href="" class="rule" style="text-decoration: none;">RULES</a>
+        </div>
+    </div>
+    <div class="prizedist">
+        <img src="/images/trophy.svg" alt="" class="prizeicon">
+        <table class="prizetable">
+            <thead class="phead">
+                <tr>
+                    <th>Standings</th>
+                    <th>Cash Prize</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1.</td>
+                    <td>₹200</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>₹200</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="confirmedpart">
+        <img src="/images/pngkit_pen-and-paper-png_768652.png" alt="" class="regiicon">
+        <div class="listcon">
+            <h3>Registered players</h3>
+            <hr class="tourrhr">
+        </div>
+        <table class="confirmtable">
+            <thead class="confirmhead">
+                <tr>
+                    <th>Name used for registration</th>
+                    <th class="idnames">IDs registered</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Random Sharma</td>
+                    <td class="idnames">
+                        <p class="ids">⭕random_sharma</p>
+                        <p class="ids">⭕random_sharma</p>
+                        <p class="ids">⭕random_sharma</p>
+                        <p class="ids">⭕random_sharma</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Random Sharma2</td>
+                    <td class="idnames">
+                        <p class="ids">⭕random_sharma</p>
+                        <p class="ids">⭕random_sharma</p>
+                        <p class="ids">⭕random_sharma</p>
+                        <p class="ids">⭕random_sharma</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="openmodal" class="modalDialog">
+        <div>
+            <a href="" title="Close" class="close">x</a>
+            <header>RULES</header>
+            <p class="ruletext">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                book. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam odio voluptas, tempora quo voluptatem libero, voluptatibus vero odit illo earum eveniet veniam at quos aspernatur nostrum atque expedita harum ipsum! Lorem ipsum
+                dolor sit amet consectetur, adipisicing elit. Harum alias, nihil eum nostrum possimus est sit asperiores reiciendis rem, facere iste quam eligendi, eos veritatis! Nulla aliquid dolorum facilis id. Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit. Recusandae quos nostrum amet reprehenderit quia eligendi, illum, sapiente eum aperiam consectetur doloremque facilis harum accusamus fugiat sequi tenetur odio quae explicabo.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

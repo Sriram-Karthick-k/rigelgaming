@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Game update</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon (1).ico">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <label class="col-sm-2 col-form-label col-form-label-lg">Game Name</label>
+  <label class="col-sm-2 col-form-label col-form-label-lg"><%=gameName%></label>
+  <label class="col-sm-2 col-form-label col-form-label-lg">Game Type</label>
+  <label class="col-sm-2 col-form-label col-form-label-lg"><%=gameType%></label>
+  <label class="col-sm-2 col-form-label col-form-label-lg">Game Date</label>
+  <label class="col-sm-1 col-form-label col-form-label-lg"><%=gameDate%> </label>
+  <label class="col-sm-2 col-form-label col-form-label-lg">Game Time </label>
+  <label class="col-sm-2 col-form-label col-form-label-lg"><%=gameTime%></label>
+  <label class="col-sm-2 col-form-label col-form-label-lg">Game Max Players</label>
+  <label class="col-sm-2 col-form-label col-form-label-lg"><%=maxPlayers%></label>
+  <label class="col-sm-2 col-form-label col-form-label-lg">Game Entry Amount</label>
+  <label class="col-sm-1 col-form-label col-form-label-lg"><%=gameEntry%></label>
+  <label class="col-sm-2 col-form-label col-form-label-lg">Game Winning Amount</label>
+  <label class="col-sm-2 col-form-label col-form-label-lg"><%=winningAmount%></label>
+  <hr>
+  <h1>Rules</h1>
+
+  <%for(var i=0;i<gameRules.length;i++){%>
+
+  <label class="col-sm-2 col-form-label col-form-label-lg"><%=gameRules[i].rule%></label>
+
+  <%}%>
+    <form action="/ruleadd" method="post">
+      <input type="text" name="ruleFront" for="updateid" class="form-control-lg col-lg-2" placeholder=" Rule">
+    <button type="submit" class="btn btn-primary  col-sm-1" value="<%=gameId%>" name="gameId">add</button>
+    </form>
+
+</body>
+
+</html>

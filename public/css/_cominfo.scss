@@ -1,0 +1,262 @@
+.joinrule {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 200px;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 8px 6px 15px 5px #000000;
+    box-shadow: 8px 6px 15px 5px #000000;
+    background-color: #121212;
+    color: white;
+    z-index: 0;
+    border-radius: 5px;
+    h3 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.joinlogo {
+    position: relative;
+    z-index: 1;
+    width: 160px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 50px
+}
+
+.tourrhr {
+    border: 0;
+    box-shadow: 0;
+    border-bottom: 0.1px solid !important;
+    border-image-slice: 8 !important;
+    border-image-source: linear-gradient(90deg, white, transparent) !important;
+    margin: 0;
+}
+
+.detailing {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.imdate {
+    padding-left: 15px;
+}
+
+.etryfee {
+    padding-right: 5px;
+    text-align: center;
+}
+
+.pol {
+    padding-left: 5px;
+    text-align: center;
+}
+
+.impart {
+    padding-left: 5px;
+}
+
+.joru {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    margin-top: 30px;
+}
+
+.join,
+.rule {
+    text-decoration: none;
+    background-color: #ff4040;
+    width: 120px;
+    margin: 10px 20px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 50px;
+    color: #FFF;
+    border-radius: 5px;
+    transition: all 0.2s;
+    box-shadow: 0px 5px 0px 0px #ff4040;
+}
+
+.rule:hover,
+.join:hover {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 0px 0px #ff4040;
+    color: #FFF;
+}
+
+.prizeicon {
+    margin-top: 40px;
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+    margin-right: auto;
+    bottom: 25px;
+    margin-bottom: 30px;
+}
+
+.prizedist {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 8px 6px 15px 5px #000000;
+    box-shadow: 8px 6px 15px 5px #000000;
+    background-color: #121212;
+    color: white;
+    z-index: 0;
+    border-radius: 5px;
+    padding-bottom: 1px;
+}
+
+.prizetable {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+table tr:nth-child(2n) {
+    background: #343434;
+}
+
+.confirmedpart {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 8px 6px 15px 5px #000000;
+    box-shadow: 8px 6px 15px 5px #000000;
+    background-color: #121212;
+    color: white;
+    z-index: 0;
+    border-radius: 5px;
+    padding-bottom: 1px;
+    h3 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    .tourrhr {
+        border: 0;
+        box-shadow: 0;
+        border-bottom: 0.1px solid !important;
+        border-image-slice: 8 !important;
+        border-image-source: linear-gradient(90deg, white, transparent) !important;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.confirmtable {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.regiicon {
+    margin-top: 40px;
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+    margin-right: auto;
+    bottom: 25px;
+}
+
+table td {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+table td:first-child {
+    border-left: none;
+}
+
+table td:last-child {
+    border-right: none;
+}
+
+tbody:before {
+    content: "@";
+    display: block;
+    line-height: 20px;
+    text-indent: -99999px;
+}
+
+@media (max-width: 490px) {
+    .confirmtable {
+        font-size: 0.8rem;
+    }
+    .idnames {
+        padding-left: 20px;
+    }
+}
+
+.modalDialog {
+    background: rgba(0, 0, 0, 0.8);
+    color: #333;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 99999;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+    pointer-events: none;
+    header {
+        text-align: center;
+        font-size: 2rem;
+    }
+    color: wheat;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialog>div {
+    width: 80%;
+    position: relative;
+    margin: 10% auto;
+    padding: 10px 20px 15px 20px;
+    border-radius: 8px;
+    background: #fff;
+    background: linear-gradient(#141e30, #243b55);
+}
+
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+    background: #00d9ff;
+}

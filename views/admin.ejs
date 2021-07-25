@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>admin</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon (1).ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <form action="/admin" method="post">
+    <div class="form-group row">
+      <label for="gameName" class="col-sm-2 col-form-label col-form-label-lg">Game Name</label>
+      <div class="col-sm-2">
+        <input type="text" name="gameName" class="form-control form-control-lg" id="gameName" placeholder="Game name">
+      </div>
+      <label for="gameType" class="col-sm-2 col-form-label col-form-label-lg">Game Type</label>
+      <div class="form-check form-check-inline col-sm-1">
+        <input class="form-check-input" type="radio" name="gameType" value="solo">
+        <label class="form-check-label" for="inlineRadio1">solo</label>
+        <input class="form-check-input" type="radio" name="gameType" value="duo">
+        <label class="form-check-label" for="inlineRadio2">duo</label></label>
+        <input class="form-check-input" type="radio" name="gameType" value="squad">
+        <label class="form-check-label" for="inlineRadio2">squad</label></label>
+      </div>
+
+      <label for="gameDate" class="col-sm-2 col-form-label col-form-label-lg">Game Date</label>
+      <div class="col-sm-2">
+        <input type="date" name="gameDate" class="form-control form-control-lg" id="gameDate">
+      </div>
+      <label for="gameTime" class="col-sm-2 col-form-label col-form-label-lg">Game Time</label>
+      <div class="col-sm-2">
+        <input type="time" name="gameTime" class="form-control form-control-lg" id="gameTime">
+      </div>
+      <label for="gameMaxPlayers" class="col-sm-2 col-form-label col-form-label-lg">Game max players</label>
+      <div class="col-sm-2">
+        <input type="number" class="form-control form-control-lg" name="gameMaxPlayers" id="gameMaxPlayers" placeholder="Game max players">
+      </div>
+      <label for="gameEntryAmount" class="col-sm-2 col-form-label col-form-label-lg">Game entry Amount</label>
+      <div class="col-sm-2">
+        <input type="number" class="form-control form-control-lg" name="gameEntryAmount" id="gameEntryAmount" placeholder="Game entry Amount">
+      </div>
+      <label for="gameWinningAmount" class="col-sm-2 col-form-label col-form-label-lg">Game Winning Amount</label>
+      <div class="col-sm-2">
+        <input type="number" class="form-control form-control-lg" name="gameWinningAmount" id="gameWinningAmount" placeholder="Game Winning Amount">
+      </div>
+      <label for="adminPassword" class="col-sm-2 col-form-label col-form-label-lg">Admin password</label>
+      <div class="col-sm-2">
+        <input type="password" class="form-control form-control-lg" name="adminPassword" id="adminPassword" placeholder="Admin password">
+      </div>
+
+      <div class="col-3">
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+      </div>
+
+    </div>
+  </form>
+
+  <hr>
+  <h1>Solo:</h1>
+  <%for(var solo=0;solo<gameSoloFront.length;solo++){%>
+  <form action="/solodelete" method="post">
+    <label class="col-sm-1 col-form-label">Game name:</label>
+    <label class="col-sm-1 col-form-label"><%=gameSoloFront[solo].gameName%></label>
+    <label class="col-sm-1 col-form-label">Game date:</label>
+    <label class="col-sm-1 col-form-label"><%=gameSoloFront[solo].gameDate%></label>
+    <label class="col-sm-1 col-form-label">Game time:</label>
+    <label class="col-sm-1 col-form-label"><%=gameSoloFront[solo].gameTime%></label>
+    <input type="password" name="delPass" class=" form-control-sm col-sm-1" placeholder="Password">
+    <button type="submit" class="btn btn-primary  col-sm-1" value="<%=gameSoloFront[solo]._id%>" name="soloDel">Delete</button>
+  </form>
+  <%}%>
+  <hr>
+  <h1>Duo:</h1>
+  <%for(var duo=0;duo<gameDuoFront.length;duo++){%>
+  <form action="/duodelete" method="post">
+    <label class="col-sm-1 col-form-label">Game name:</label>
+    <label class="col-sm-1 col-form-label"><%=gameDuoFront[duo].gameName%></label>
+    <label class="col-sm-1 col-form-label">Game date:</label>
+    <label class="col-sm-1 col-form-label"><%=gameDuoFront[duo].gameDate%></label>
+    <label class="col-sm-1 col-form-label">Game time:</label>
+    <label class="col-sm-1 col-form-label"><%=gameDuoFront[duo].gameTime%></label>
+    <input type="password" name="delPass" class=" form-control-sm col-sm-1" placeholder="Password">
+    <button type="submit" class="btn btn-primary  col-sm-1" value="<%=gameDuoFront[duo]._id%>" name="duoDel">Delete</button>
+  </form>
+  <%}%>
+  <hr>
+  <h1>Squad:</h1>
+  <%for(var squad=0;squad<gameSquadFront.length;squad++){%>
+  <form action="/squaddelete" method="post">
+    <label class="col-sm-1 col-form-label">Game name:</label>
+    <label class="col-sm-1 col-form-label"><%=gameSquadFront[squad].gameName%></label>
+    <label class="col-sm-1 col-form-label">Game date:</label>
+    <label class="col-sm-1 col-form-label"><%=gameSquadFront[squad].gameDate%></label>
+    <label class="col-sm-1 col-form-label">Game time:</label>
+    <label class="col-sm-1 col-form-label"><%=gameSquadFront[squad].gameTime%></label>
+    <input type="password" name="delPass" class=" form-control-sm col-sm-1" placeholder="Password">
+    <button type="submit" class="btn btn-primary  col-sm-1" value="<%=gameSquadFront[squad]._id%>" name="squadDel">Delete</button>
+
+
+  </form>
+  <%}%>
+  <hr>
+</body>
+
+</html>

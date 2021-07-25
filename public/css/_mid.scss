@@ -1,0 +1,33 @@
+.comingsoon {
+    color: #ecf0f1;
+    font-family: $logo;
+    margin-top: 2vh;
+    font-weight: 100rem;
+    font-size: 3rem;
+    text-align: center;
+    .number {
+        font-size: 3.5rem;
+        color: #ce2029;
+    }
+}
+
+@media (max-width: 768px) {
+    .comingsoon {
+        font-size: 2rem;
+        .number {
+            font-size: 2.5rem;
+            color: #ce2029;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .comingsoon {
+        font-size: 1.5rem;
+        margin-top: 2vh;
+        .number {
+            font-size: 2rem;
+            color: #ce2029;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.child {
+    margin: 0 auto;
+    min-height: 100vh;
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    background: url(../images/backgroundhome.jpg);
+    background-size: cover;
+    transition: all 1s;
+    background-position: center;
+    z-index: 0;
+}
+
+.child:hover,
+.child:focus {
+    transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+    .child {
+        background: url(../images/backgroundphone.jpg);
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+    }
+}
