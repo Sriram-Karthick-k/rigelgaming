@@ -1,15 +1,7 @@
-@import "config",
-"defaults",
-"nav",
-"back",
-"mid",
-"count",
-"butt",
-"toggle",
-"tournament",
-"cominfo";
+@import "config", "defaults", "nav", "back", "mid", "count", "butt", "toggle",
+  "tournament", "cominfo";
 .navhr {
-    height: 10px;
-    border: 0;
-    box-shadow: 0 10px 10px -10px #8c8b8b inset;
+  height: 10px;
+  border: 0;
+  box-shadow: 0 10px 10px -10px #8c8b8b inset;
 }

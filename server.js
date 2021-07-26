@@ -48,10 +48,10 @@ app.use(require("./Routes/duo"));
 app.use(require("./Routes/squad"));
 
 
-app.listen(process.env.PORT || 8000, function(err) {
+app.listen(process.env.PORT || 3000, function(err) {
   if (err) {
     console.log(err)
   } else {
-    console.log("Listening on Port 8000")
+    console.log("Listening on Port 3000")
   }
 })

@@ -1,19 +1,26 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
+  height: 100%;
+  body {
     height: 100%;
-    body {
-        height: 100%;
-        background-color: #110011;
-        overflow-x: hidden;
-    }
+    background-color: #110011;
+    overflow-x: hidden;
+  }
 }
-
+body::-webkit-scrollbar {
+  background-color: #110011;
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #ecf0f1;
+  border-radius: 15px;
+}
 img {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
