@@ -18,4 +18,4 @@ This will be the backend server of the project.
 
 ### Tournament Page
 
-<img src="website_images/signup.png" width="900">
+<img src="website_images/tournament.png" width="900">
