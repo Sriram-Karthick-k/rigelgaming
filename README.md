@@ -19,3 +19,5 @@ In the project directory, you can run:
 Runs the server in http://localhost:3000.
 
 This will be the server of the project.
+
+### Run MongoDB server for storage purposes
