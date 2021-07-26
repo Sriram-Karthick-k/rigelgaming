@@ -1,14 +1,4 @@
-# Chat App
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `nodemon server.js`
-
-Runs the backend server in http://localhost:3001.
-
-This will be the backend server of the project.
+# Rigel Gaming
 
 ## Webpage Preview
 
@@ -19,3 +9,13 @@ This will be the backend server of the project.
 ### Tournament Page
 
 <img src="website_images/tournament.png" width="900">
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `nodemon server.js`
+
+Runs the server in http://localhost:3000.
+
+This will be the server of the project.
